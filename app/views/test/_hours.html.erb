@@ -1,0 +1,17 @@
+<% 49.times do |n| %>
+	<% if n%2 == 0%>
+		<% if n<24%>
+			<option value="<%= (n/2) %>-00"> <%= (n/2)%12 %>:00 am </option>
+			<option value="<%= (n/2) %>-30"> <%= (n/2)%12 %>:30 am </option>
+		<% elsif n == 24 %>
+			<option value="12-00"> 12:00 am </option>
+			<option value="12-30"> 12:30 am </option>
+		<% elsif n>24 && n<48%>	
+			<%= (n/2)%12 %> pm
+			<option value="<%= (n/2) %>-00"> <%= (n/2)%12 %>:00 pm </option>
+			<option value="<%= (n/2) %>-30"> <%= (n/2)%12 %>:30 pm </option>
+		<% elsif n==48 %>
+			<option value="24-00"> 12:00 pm </option>
+		<% end %> 
+	<% end %>
+<% end %>

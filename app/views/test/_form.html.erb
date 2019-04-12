@@ -1,0 +1,31 @@
+<form>
+	<h6 class="alert" style="display: none;"><b>Ingrese un periodo válido<b></h6>
+	<p class="formText">
+		Periodo: 
+		<label id="checkbox">
+	        <input type="checkbox" id="allDay" onchange="allDaySelected()">
+	        <span>Todo el día</span>
+      	</label>
+    </p>
+	<input type="text" id="startDate" class="datepicker" placeholder="Fecha Inicio">
+	<div class="select-wrapper startHour">
+		<select id="startHour">
+			<option value="" selected>Hora Inicio</option>
+  			<%= render 'hours' %>
+		</select>
+	</div>
+	<input type="text" id="endDate" class="datepicker" placeholder="Fecha Fin">
+	<div class="select-wrapper endHour">
+		<select id="endHour">
+			<option value="" selected>Hora Fin</option>
+  			<%= render 'hours' %>
+		</select>
+	</div>
+	<br>
+	<br>
+	<p class="formText">Título:</p>
+	<input type="text" id="title">
+	<p class="formText">Descripción:</p>
+	<textarea id="description" class="materialize-textarea"></textarea>
+    <center><button type="reset" id="save" onclick="clicked()" class="waves-effect waves-light btn green">Guardar</button></center>
+</form>
